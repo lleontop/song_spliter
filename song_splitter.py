@@ -54,7 +54,7 @@ def main(audio_file, times_file, output_folder=None):
         
         tdelta = datetime.strptime(end_time, FMT) - datetime.strptime(start_time, FMT)
         song_duration = tdelta.total_seconds()
-        print "Spliting %s: '%s' from %s to %s. Duration: %s" % (no, title, start_time, end_time, song_duration)
+        print "Splitting %s: '%s' from %s to %s. Duration: %s" % (no, title, start_time, end_time, song_duration)
         
         song = sound[previous_mark * 1000:(previous_mark + song_duration) * 1000]
         song = song.fade_in(10)

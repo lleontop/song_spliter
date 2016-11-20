@@ -136,6 +136,7 @@ class MainWindow(wx.Frame):
             self.filename = dlg.GetFilename()
             self.dirname = dlg.GetDirectory()
             filename = os.path.join(self.dirname, self.filename)
+            self.control.SetValue(filename)
             #self.control.SetValue(f.read())
             #f.close()
         dlg.Destroy()
